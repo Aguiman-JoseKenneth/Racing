@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Zombiesurvivorgame.net</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+
+    <h1 class="game-title">Zombie Survivor</h1>
+
+    <div class="game-ui">
+        <div class="ui-box">Score: <span id="score">0</span></div>
+        <div class="ui-box">Wave: <span id="wave">1</span></div>
+        <div class="ui-box">Health: <span id="health">100</span></div>
+        <div class="ui-box">Player: <span id="playerNameDisplay">Guest</span></div>
+    </div>
+
+    <div class="game-container">
+        <canvas id="gameCanvas" width="1000" height="600"></canvas>
+
+        <div id="startScreen" class="overlay-screen">
+            <h2>Zombie Survivor</h2>
+            <p>Survive as many waves as possible!</p>
+            <input type="text" id="usernameInput" placeholder="Enter Username" maxlength="15" value="Survivor">
+            <button id="startButton">Start Game</button>
+        </div>
+
+        <div id="gameOverScreen" class="overlay-screen hidden">
+            <h2>Game Over</h2>
+            <p>Player: <span id="finalPlayerName">Guest</span></p>
+            <p>Final Score: <span id="finalScore">0</span></p>
+            <button id="restartButton">Restart</button>
+        </div>
+    </div>
+
+    <div class="leaderboard">
+        <h2>Local Top Board</h2>
+        <ol id="leaderboardList">
+            <li>Alpha_Unit - 1500</li>
+            <li>Bravo_Lead - 980</li>
+            <li>Guest - 450</li>
+        </ol>
+    </div>
+
+    <script type="module" src="js/database.js"></script>
+    <script type="module" src="js/script.js"></script>
+  </body>
+</html>
